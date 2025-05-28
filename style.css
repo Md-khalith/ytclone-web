@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Roboto','ssans-serif';
+}
+.grid-container{
+    padding-top:75px;
+    padding-left:80px;
+    padding-right:25px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    row-gap:20px;
+    column-gap:20px;
+}
+.grid {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+}
+.thumbnail {
+    width: 100%;
+    border-radius: 11px;
+    transition: border-radius 0.3s ease-in-out;
+}
+.grid:hover .thumbnail{
+    border-radius:0;
+}
+.video-time{
+    height:25px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.712);
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+.thumbnail-container {
+    position: relative;
+} 
+.video-info {
+    display: flex;
+    margin-top: 10px;
+    align-items: flex-start;
+}
+
+.profile-container {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.profile {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.discription {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 5px;
+}
+
+.discription p {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.channel-name {
+    font-size: 13px;
+    color: #606060;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.channel-name svg {
+    color: #606060;
+}
+.three-dot{
+    position: absolute;
+    left:334px;
+    bottom:19px;
+}
+.discription div:last-child {
+    font-size: 13px;
+    color: #606060;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.grid:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 540px) {
+    .grid-container{
+      grid-template-columns: 1fr;
+    }
+}
+@media (min-width:541px) and (max-width: 960px) {
+    .grid-container{
+      grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 961px) and (max-width: 1810px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width:790px){
+    .grid-container{
+        padding-left:25px;
+    }
+}
+
+
+
+
